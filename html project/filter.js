@@ -12,7 +12,7 @@ const btns=[
         name: 'Equipment'
     }
     ]
-    
+
     const filters = [...new Set(btns.map((btn)=>
         {return btn}))]
     
@@ -22,75 +22,84 @@ const btns=[
             "<button class='fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
             )
     }).join('');
-    
+
     const product = [
     {
         id: 1,
-        image: 'image/gg-1.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 120,
-        category: 'mobile'
+        image: 'images/adidas-cleats.webp',
+        title: 'adidas Precision+ Cleats',
+        price: 180,
+        category: 'adidas'
     },
     {
-        id: 5,
-        image: 'image/hh-2.jpg',
-        title: 'Air Pods Pro',
-        price: 60,
-        category: 'airpods'
-    },
-    {
-        id: 3,
-        image: 'image/ee-3.jpg',
-        title: '250D DSLR Camera',
-        price: 230,
-        category: 'cameras'
-    },
-    {
-        id: 1,
-        image: 'image/gg-2.jpg',
-        title: 'Foldable Mobile',
-        price: 300,
-    },
-    {
-        id: 5,
-        image: 'image/hh-3.jpg',
-        title: 'Air Pods Pro',
-        price: 65,
-        category: 'airpods'
-    },
-    {
-        id: 3,
-        image: 'image/ee-2.jpg',
-        title: 'DSLR Camera',
-        price: 200,
-        category: 'cameras'
-    },
-    {
-        id: 4,
-        image: 'image/dd-2.jpg',
-        title: 'Laptop',
-        price: 100,
-        category: 'Laptop'
-    },
-    {
-        id: 1,
-        image: 'image/gg-3.jpg',
-        title: 'Mobile',
-        price: 350,
-    },
-    {
-        id: 3,
-        image: 'image/ee-1.jpg',
-        title: 'DSLR Camera',
+        id: 2,
+        image: 'images/messi-jersey.webp',
+        title: 'adidas Lionel Messi #10 Jersey',
         price: 130,
-        category: 'cameras'
+        category: 'adidas'
     },
     {
-        id: 5,
-        image: 'image/hh-1.jpg',
-        title: 'Air Pods',
+        id: 2,
+        image: 'images/cowell-jersey.webp',
+        title: 'adidas Cade Cowell #44 Jersey',
+        price: 120,
+        category: 'adidas'
+    },
+    {
+        id: 3,
+        image: 'images/nike-bag.webp',
+        title: 'Nike Soccer Backpack',
+        price: 57,
+        category: 'Nike'
+    },
+    {
+        id: 1,
+        image: 'images/nike-fgc.png',
+        title: 'Nike Firm Ground Cleats',
+        price: 180,
+        category: 'Nike'
+    },
+    {
+        id: 2,
+        image: 'images/mbappe-jersey.webp',
+        title: 'Nike Kylian Mbappé #10 Jersey',
+        price: 120,
+        category: 'Nike'
+    },
+    {
+        id: 3,
+        image: 'images/adidas-ball.webp',
+        title: 'adidas Soccer Ball',
+        price: 20,
+        category: 'adidas'
+    },
+    {
+        id: 2,
+        image: 'images/ronaldo-jersey.webp',
+        title: 'Nike Cristiano Ronaldo #7 Jersey',
+        price: 135,
+        category: 'Nike'
+    },
+    {
+        id: 3,
+        image: 'images/nike-ball.webp',
+        title: 'Nike Premier Soccer Ball',
+        price: 40,
+        category: 'Nike'
+    },
+    {
+        id: 3,
+        image: 'images/adidas-gloves.webp',
+        title: 'adidas Goalkeeper Gloves',
+        price: 50,
+        category: 'adidas'
+    },
+    {
+        id: 1,
+        image: 'images/puma-tfc.png',
+        title: 'PUMA Turf Ground Cleats',
         price: 85,
-        category: 'airpods'
+        category: 'PUMA'
     },
     ];
     

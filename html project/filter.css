@@ -43,6 +43,16 @@
 	font-size: 30px;
 	font-weight: bold;
 }
+
+.fil-b{
+	padding: 15px 15px;
+	background-color: white;
+	margin: 7px 0;
+	cursor: pointer;
+	color: #333;
+	text-align: justify;
+}
+
 .fil-p{
 	padding: 15px 15px;
 	background-color: white;
@@ -65,6 +75,7 @@ button{
 	cursor: pointer;
 	color: white;
 }
+
 
 #root{
 	width: 100%;
