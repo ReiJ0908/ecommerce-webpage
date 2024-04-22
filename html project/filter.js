@@ -23,9 +23,35 @@ const btns=[
             )
     }).join('');
 
-    const product = [
+const btns2=[
+    {
+        id_b: 1,
+        name: 'adidas'
+    },
+    {
+        id_b: 2,
+        name: 'Nike'
+    },
+    {
+        id_b: 3,
+        name: 'PUMA'
+    }
+    ]
+
+    const filters2 = [...new Set(btns2.map((btn2)=>
+        {return btn2}))]
+    
+    document.getElementById('btns2').innerHTML=filters2.map((btn2)=>{
+        var {name, id_b} = btn2;
+        return(
+            "<button class='fil-p' onclick='filterItems2("+(id_b)+`)'>${name}</button>`
+            )
+    }).join('');
+
+    var product = [
     {
         id: 1,
+        id_b:1,
         image: 'images/adidas-cleats.webp',
         title: 'adidas Precision+ Cleats',
         price: 180,
@@ -33,6 +59,7 @@ const btns=[
     },
     {
         id: 2,
+        id_b:1,
         image: 'images/messi-jersey.webp',
         title: 'adidas Lionel Messi #10 Jersey',
         price: 130,
@@ -40,6 +67,7 @@ const btns=[
     },
     {
         id: 2,
+        id_b:1,
         image: 'images/cowell-jersey.webp',
         title: 'adidas Cade Cowell #44 Jersey',
         price: 120,
@@ -47,6 +75,7 @@ const btns=[
     },
     {
         id: 3,
+        id_b:2,
         image: 'images/nike-bag.webp',
         title: 'Nike Soccer Backpack',
         price: 57,
@@ -54,6 +83,7 @@ const btns=[
     },
     {
         id: 1,
+        id_b:2,
         image: 'images/nike-fgc.png',
         title: 'Nike Firm Ground Cleats',
         price: 180,
@@ -61,6 +91,7 @@ const btns=[
     },
     {
         id: 2,
+        id_b:2,
         image: 'images/mbappe-jersey.webp',
         title: 'Nike Kylian Mbappé #10 Jersey',
         price: 120,
@@ -68,6 +99,7 @@ const btns=[
     },
     {
         id: 3,
+        id_b:1,
         image: 'images/adidas-ball.webp',
         title: 'adidas Soccer Ball',
         price: 20,
@@ -75,6 +107,7 @@ const btns=[
     },
     {
         id: 2,
+        id_b:2,
         image: 'images/ronaldo-jersey.webp',
         title: 'Nike Cristiano Ronaldo #7 Jersey',
         price: 135,
@@ -82,6 +115,7 @@ const btns=[
     },
     {
         id: 3,
+        id_b:2,
         image: 'images/nike-ball.webp',
         title: 'Nike Premier Soccer Ball',
         price: 40,
@@ -89,6 +123,7 @@ const btns=[
     },
     {
         id: 3,
+        id_b:1,
         image: 'images/adidas-gloves.webp',
         title: 'adidas Goalkeeper Gloves',
         price: 50,
@@ -96,6 +131,7 @@ const btns=[
     },
     {
         id: 1,
+        id_b:3,
         image: 'images/puma-tfc.png',
         title: 'PUMA Turf Ground Cleats',
         price: 85,
@@ -107,7 +143,7 @@ const btns=[
         {return item}))]
     
     const filterItems = (a)=>{
-        const flterCategories = categories.filter(item);
+        var flterCategories = categories.filter(item);
         function item(value){
             if(value.id==a){
                 return(
@@ -116,6 +152,18 @@ const btns=[
             }
         }
         displayItem(flterCategories)
+    }
+
+    const filterItems2 = (b)=>{
+        var flterCategories2 = categories.filter(item);
+        function item(value){
+            if(value.id_b==b){
+                return(
+                    value.id_b
+                    )
+            }
+        }
+        displayItem(flterCategories2)
     }
     
     

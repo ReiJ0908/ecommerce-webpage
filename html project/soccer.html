@@ -84,14 +84,28 @@ $(function(){
   </div>
 
 
-  <div class="container" style="height:258px">
+  <div class="container brands-container" style="height:258px">
     <div class="w3-bar-item" style="width:100%">
       <h>Brands</h>
-      <div id="checkboxes"></div>
+      <div id="btns2"></div>
       </div>
     </div>
-  
-        </div>
+
+  <div class="container" style="height:258px">
+    <div class="w3-bar-item" style="width:100%">
+      <h>Price</h>
+      <button class='fil-b' id="pricecheck">wip</button>
+      <script>
+        document.getElementById("pricecheck").onclick = function() {priceCheck()};
+
+        function priceCheck() {
+          document.getElementById("pricecheck").innerHTML = products.toString() 
+        }
+      </script>
+      </div>
+    </div>
+
+ 
   <button style="top:114px">Clear Filters</button>
 </nav>
 <!--end of sidebar-->
@@ -103,8 +117,7 @@ $(function(){
   </div>
 </div>
 
-<script src="filter.js"></script>
-<script src="checkboxes.js"></script>
+<script type="text/javascript" src="filter.js"></script>
 
 </body>
 </html>
