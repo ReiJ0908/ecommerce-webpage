@@ -1,3 +1,59 @@
+const rangeInput = document.querySelectorAll(".range-input input"),
+  priceInput = document.querySelectorAll(".price-input input"),
+  range = document.querySelector(".slider .progress");
+let priceGap = 10;
+
+priceInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    var minPrice = parseInt(priceInput[0].value),
+      maxPrice = parseInt(priceInput[1].value);
+
+    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+      if (e.target.className === "input-min") {
+        rangeInput[0].value = minPrice;
+        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+      } else {
+        rangeInput[1].value = maxPrice;
+        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+      }
+    }
+    
+  });
+});
+
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minVal = parseInt(rangeInput[0].value),
+      maxVal = parseInt(rangeInput[1].value);
+
+    if (maxVal - minVal < priceGap) {
+      if (e.target.className === "range-min") {
+        rangeInput[0].value = maxVal - priceGap;
+      } else {
+        rangeInput[1].value = minVal + priceGap;
+      }
+    } else {
+      priceInput[0].value = minVal;
+      priceInput[1].value = maxVal;
+      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    }
+  });
+});
+
+function priceCheck() {
+    //x equals item price
+    let x = `${price}`
+    let minPrice = parseInt(priceInput[0].value), maxPrice = parseInt(priceInput[1].value)
+    if (x >= minPrice && x <= maxPrice) {
+      // code to execute if x is in range
+      console.log(x)
+    } else {
+      // code to execute if x is outside the range 
+      console.log("nope")
+    }
+  }
+
 const btns=[
     {
         id: 1,
@@ -23,6 +79,8 @@ const btns=[
             )
     }).join('');
 
+;
+    
 const btns2=[
     {
         id_b: 1,
@@ -47,6 +105,7 @@ const btns2=[
             "<button class='fil-p' onclick='filterItems2("+(id_b)+`)'>${name}</button>`
             )
     }).join('');
+
 
     var product = [
     {
@@ -141,6 +200,7 @@ const btns2=[
     
     const categories = [...new Set(product.map((item)=>
         {return item}))]
+
     
     const filterItems = (a)=>{
         var flterCategories = categories.filter(item);

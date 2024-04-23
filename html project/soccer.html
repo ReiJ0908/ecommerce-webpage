@@ -94,35 +94,29 @@ $(function(){
   <div class="container" style="height:258px">
     <div class="w3-bar-item" style="width:100%">
       <h>Price</h>
-      <div class="price-field" id="rangevalue">
-        <span>Minimum Price</span>
-        <input type="number" class="min-input" value="10">
+      <div class="price-input">
+        <div class="field">
+          <span>Minimum Price</span>
+          <input type="number" class="min-input" value="10">
+        </div>
+        <div class="field">
+          <span>Maximum Price</span>
+          <input type="number" class="min-input" value="300">
+        </div>
       </div>
-      <div class="price-field">
-        <span>Maximum Price</span>
-        <input type="number" class="max-input" value="500">
+      <div class="slider" style="margin-top: 32px">
+        <div class="progress"></div>
       </div>
-      <!-- Slider -->
-      <div class="range-input" id="rangeInputvalue"> 
-        <input type="range" 
-               class="min-range" 
-               min="0" 
-               max="1000" 
-               value="200" 
-               step="1"> 
-        <input type="range" 
-               class="max-range" 
-               min="0" 
-               max="1000" 
-               value="500" 
-               step="1"> 
-    </div> 
-      <button id="pricecheck" style="margin-top: 16px;">Filter Price</button>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="300" value="65" step="10">
+        <input type="range" class="range-max" min="0" max="300" value="230" step="10">
+      </div>
+      <button id="prices" onclick="priceCheck()" style="margin-top: 32px;">
+        Filter Price
+      </button>
       </div>
     </div>
-
- 
-  <button style="top:114px">Clear Filters</button>
+  <button style="top:114px"><a href="soccer.html" style="text-decoration: none;">Clear Filters</a></button>
 </nav>
 <!--end of sidebar-->
 
