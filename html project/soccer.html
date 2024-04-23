@@ -94,14 +94,30 @@ $(function(){
   <div class="container" style="height:258px">
     <div class="w3-bar-item" style="width:100%">
       <h>Price</h>
-      <button class='fil-b' id="pricecheck">wip</button>
-      <script>
-        document.getElementById("pricecheck").onclick = function() {priceCheck()};
-
-        function priceCheck() {
-          document.getElementById("pricecheck").innerHTML = products.toString() 
-        }
-      </script>
+      <div class="price-field" id="rangevalue">
+        <span>Minimum Price</span>
+        <input type="number" class="min-input" value="10">
+      </div>
+      <div class="price-field">
+        <span>Maximum Price</span>
+        <input type="number" class="max-input" value="500">
+      </div>
+      <!-- Slider -->
+      <div class="range-input" id="rangeInputvalue"> 
+        <input type="range" 
+               class="min-range" 
+               min="0" 
+               max="1000" 
+               value="200" 
+               step="1"> 
+        <input type="range" 
+               class="max-range" 
+               min="0" 
+               max="1000" 
+               value="500" 
+               step="1"> 
+    </div> 
+      <button id="pricecheck" style="margin-top: 16px;">Filter Price</button>
       </div>
     </div>
 
