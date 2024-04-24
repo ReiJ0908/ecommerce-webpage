@@ -42,16 +42,24 @@ rangeInput.forEach((input) => {
 });
 
 function priceCheck() {
-    //x equals item price
-    let x = `${price}`
+    //x equals item price - make a loop that gets all of the prices
+    let message = ""
+    //let x = (product[0].price)
     let minPrice = parseInt(priceInput[0].value), maxPrice = parseInt(priceInput[1].value)
-    if (x >= minPrice && x <= maxPrice) {
-      // code to execute if x is in range
-      console.log(x)
-    } else {
-      // code to execute if x is outside the range 
-      console.log("nope")
-    }
+
+    product.forEach(function(products){
+      if (products.price >= minPrice && products.price <= maxPrice){
+        var flterPrice = categories.filter(item);
+        function item(value){
+          if(value.price>= minPrice && products.price <= maxPrice){
+            return(value.price)
+          }
+        }
+        displayItem(flterPrice)
+
+        message += products.title +"\n";
+      }
+    }); alert("Products within range:\n" + message);
   }
 
 const btns=[
