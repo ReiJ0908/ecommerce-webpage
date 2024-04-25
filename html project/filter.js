@@ -51,7 +51,7 @@ function priceCheck() {
       if (products.price >= minPrice && products.price <= maxPrice){
         var flterPrice = categories.filter(item);
         function item(value){
-          if(value.price>= minPrice && products.price <= maxPrice){
+          if(value.price>= minPrice && value.price <= maxPrice){
             return(value.price)
           }
         }
