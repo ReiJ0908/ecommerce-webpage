@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="about.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
@@ -91,7 +93,7 @@ $(function(){
 <!-- Image Header -->
 <header class="home-image w3-display-container w3-animate-opacity w3-center">
   <h1 class="title-text w3-margin w3-jumbo">Authentic Sporting Supply</h1>
-  <p class="subtitle-text w3-xlarge">buy our shirts please</p>
+  <p class="subtitle-text w3-xlarge">(insert cool slogan here)</p>
   <img src="images/playing-soccer.png" alt="People playing soccer" style="width:100%;min-height:350px;max-height:800px;filter: blur(4px);">
   <a href="#shop">
   <button class="btn w3-button w3-teal w3-padding-large w3-large w3-margin-top">Shop Now</button></a>
@@ -101,10 +103,10 @@ $(function(){
 <div class="w3-main">
 
   <div class="w3-row">
-    <div class="w3-container w3-padding-64" id="shop">
+    <div class="w3-container w3-padding-64" id="shop" style="margin-left: 20%;margin-right: 20%">
       <h1 class="w3-text-teal">Shop</h1>
       <p>Select a sport:</p>
-      <div class="w3-quarter">
+      <div class="w3-third">
       <div class="card">
         <a href="soccer.html" class='card-link'>
           <img src="images/icon-soccer.png" alt="Soccer icon" style="width:100%">
@@ -112,7 +114,7 @@ $(function(){
         </a>
       </div>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <div class="card">
         <a href="football.html" class='card-link'>
           <img src="images/football-icon.png" alt="football icon" style="width:100%">
@@ -120,49 +122,63 @@ $(function(){
         </a>
       </div>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <div class="card">
         <a href="football.html" class='card-link'>
-          <img src="images/icon-soccer.png" alt="football icon" style="width:100%">
-          <h>Soccer</h>
+          <img src="images/baseball-icon.webp" alt="football icon" style="width:100%">
+          <h>Baseball</h>
         </a>
       </div>
     </div>
-    <div class="w3-quarter">
-      <div class="card">
-        <a href="football.html" class='card-link'>
-          <img src="images/football-icon.png" alt="football icon" style="width:100%">
-          <h>Soccer</h>
-        </a>
-      </div>
-  </div>
 </div>
 
 <div class="w3-row w3-light-grey w3-padding-64" id="about">
   <div class="w3-content">
-    <div class="w3-container w3-twothird">
-      <h1 class="w3-text-teal">About Us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-container">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to our website! We are a team of passionate individuals dedicated to providing quality products/services to our customers. Our mission is to <strong>exceed customer expectations</strong> and <strong>innovate</strong> in everything we do.</p>
+       
+        <h2>Our Team</h2>
+        <ul class="team-members">
+            <li><i class="fas fa-user"></i>Eduardo Perez - CEO</li>
+            <li><i class="fas fa-user"></i>Jose- Sales Manager </li>
+            <li><i class="fas fa-user"></i>Rey -  Designer</li>
+        </ul>
+       
+        <div class="history">
+            <h2>Our History</h2>
+            <p>Our company was founded in <strong>2024</strong> with the goal of <strong>having some good quality goods</strong>. Since then, we have grown into a successful business, serving customers all over the world.</p>
+        </div>
+       
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i>Email: info@example.com</li>
+                <li><i class="fas fa-phone"></i>Phone: 123-456-7890</li>
+                <li><i class="fas fa-map-marker-alt"></i>Address: 123 Main St, City, Country</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="w3-row w3-padding-64" id="news">
+    <div class="w3-content">
+      <div class="w3-container w3-twothird">
+        <h1 class="w3-text-teal">News</h1>
+        <p>Wesbite Launched! (Yay!)</p>
       </div>
       <div class="w3-third w3-center">
-        <img src="images/icon-soccer.png" style="width:100%">
+        <img src="images/news.jpg" style="width:100%">
       </div>
     </div>
   </div>
 
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-container">
-      <h1 class="w3-text-teal">News</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-
-  <footer id="myFooter">
+  <footer id="contact">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Contact Us</h4>
     </div>
   </footer>
 

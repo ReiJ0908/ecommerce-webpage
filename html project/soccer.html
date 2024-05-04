@@ -22,6 +22,10 @@
         height: inherit;
       }
 
+      .sidebar2 {
+        float: right;
+      }
+
       .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 200px;
@@ -49,6 +53,56 @@
 
       .card button:hover {
         opacity: 0.7;
+      }
+      .cart p{
+        height: 22px;
+        width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 22px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+
+      .cart-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: white;
+        border-bottom: 1px solid #aaa;
+        border-radius: 3px;
+        margin: 10px 10px;
+      }
+      img-box{
+        width: 100%;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .foot{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        padding: 10px 0px;
+        border-top: 1px solid #333;
+      }
+      .row-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+      .rowimg{
+          max-width: 43px;
+          max-height: 43px;
+          border-radius: 50%;
       }
 
 
@@ -120,14 +174,40 @@ $(function(){
 </nav>
 <!--end of sidebar-->
 
+<!-- Cart sidebar (hidden by default) -->
+<nav class="w3-sidebar sidebar2 w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="display:none;z-index:2;width:40%;min-width:300px;right:0" id="CartSidebar">
+  <a href="javascript:void(0)" onclick="cart_close()"
+  class="w3-bar-item w3-button w3-red">Close Cart</a>
+  <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+  <div id="cartItem">Your cart is empty</div>
+  <div class="foot">
+    <h3>Total</h3>
+    <h2 id="total">$ 0.00</h2>
+</div>
+  <button class="w3-bar-item w3-button w3-center w3-green">Checkout</button>
+</nav>
+
+
 <!-- main shop content-->
 <div class="w3-main" style="margin-left:250px">
-  <div class="container w3-row w3-padding-64">
+  <div class="w3-container w3-padding-32 w3-large w3-right-align" height="64px">
+    <button class="w3-quarter w3-right w3-light-grey w3-hover-grey" style="height:70px;width:200px" onclick="cart_open()"><img src="images/cart-icon.png" style="height:25px"> Cart </button>
+  </div>
+  <div class="container w3-row">
     <div id="root"></div>
   </div>
 </div>
 
 <script type="text/javascript" src="filter.js"></script>
-
+<script>
+  // Script to open and close sidebar
+  function cart_open() {
+    document.getElementById("CartSidebar").style.display = "block";
+  }
+   
+  function cart_close() {
+    document.getElementById("CartSidebar").style.display = "none";
+  }
+  </script>
 </body>
 </html>
